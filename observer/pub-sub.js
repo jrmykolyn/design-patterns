@@ -2,7 +2,9 @@
 // IMPORT MODULES
 // --------------------------------------------------
 // Node
+
 // Vendor
+
 // Project
 
 // --------------------------------------------------
@@ -12,19 +14,12 @@
 // --------------------------------------------------
 // DECLARE FUNCTIONS
 // --------------------------------------------------
-
-// ...
-// DEFINE CLASS
-// EXPOSE METHODS
-	// #subscribe( topic, callback )
-	// #publish( topic, data )
-	// #unsubscribe( id )
-
 class PubSub {
 	constructor() {
 		this.topics = {};
 	}
 
+	// INSTANCE METHODS
 	subscribe( topic, callback ) {
 		if ( !this.topics[ topic ] ) {
 			this.topics[ topic ] = [];
