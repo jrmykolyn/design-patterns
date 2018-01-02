@@ -21,6 +21,11 @@ class Subject {
 
 	// INSTANCE METHODS
 	subscribe( callback ) {
+		if ( typeof callback !== 'function' ) {
+			throw new Error( 'Whoops, the `subscribe()` method must be invoked with a valid callback function.' );
+			return;
+		}
+
 		let observer = {
 			id: new Date().getTime(),
 			callback,
@@ -32,6 +37,11 @@ class Subject {
 	}
 
 	publish( data ) {
+		if ( typeof data === 'undefined' ) {
+			throw new Error( 'Whoops, the `publish()` method must be invoked with a valid `data` argument.' );
+			return;
+		}
+
 		this.observers.forEach( ( o ) => {
 			if ( o && typeof o.callback === 'function' ) {
 				o.callback( data );
