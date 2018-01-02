@@ -35,7 +35,11 @@ test( 'Subject: `subscribe()` method should return a number.', ( t ) => {
 	t.is( typeof id, 'number' );
 } );
 
-test.todo( 'Subject: `subscribe()` method should error if invoked without a `callback` argument.' );
+test( 'Subject: `subscribe()` method should error if invoked without a `callback` argument.', ( t ) => {
+	let subject = new Subject();
+
+	t.throws( () => { subject.subscribe() } );
+} );
 
 test( 'Subject: Instance should expose the `publish()` method.', ( t ) => {
 	let subject = new Subject();
@@ -43,4 +47,11 @@ test( 'Subject: Instance should expose the `publish()` method.', ( t ) => {
 	t.is( typeof subject.publish, 'function' );
 } );
 
-test.todo( 'Subject: `publish()` method should error if invoked without a `data` argument.' );
+test( 'Subject: `publish()` method should error if invoked without a `data` argument.', ( t ) => {
+	let subject = new Subject();
+	let id = subject.subscribe( ( data ) => {
+		console.log( 'LOGGING OUT THE `data`', data );
+	} );
+
+	t.throws( () => { subject.publish() } );
+} );
