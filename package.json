@@ -1,0 +1,19 @@
+{
+  "name": "design-patterns",
+  "version": "0.0.0",
+  "description": "A repository for experimenting with various design patterns.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmykolyn/design-patterns.git"
+  },
+  "author": "Jesse R Mykolyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrmykolyn/design-patterns/issues"
+  },
+  "homepage": "https://github.com/jrmykolyn/design-patterns#readme"
+}
